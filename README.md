@@ -3,8 +3,8 @@ Jussi Kelloniemi
 
 ## Features
 
-### getreadcount()
-Getreadcount tracks different counters inside system calls. This can be called from the shell using: ```getcount <call-name> [r]```<br>
+### getreadcount() & getcoint
+Getreadcount() system call tracks different counters inside system calls. This can be called from the shell using user program getcount: ```getcount <call-name> [r]```<br>
 It can track how many times read, write, open, close and mkdir system calls have been called since kernel started.<br>
 User can also reset each of these counters by using the "r" argument: ```getcount <name> r```<br>
 Most changes were made to sysproc.c, syscall.c sysfile.c and getcount.c, but other changes were made to other files so that counters work properly.
