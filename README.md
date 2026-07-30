@@ -14,9 +14,12 @@ Most changes were made to sysproc.c, syscall.c sysfile.c and getcount.c
 To run the program I used these versions of QEMU, GCC and Linux:
 * QEMU version used: QEMU emulator version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.17)
 * GCC: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
-* Linux: Ubuntu 24.04.1 LTS
+* Linux: Ubuntu 24.04.1 LTS <br>
 I also had to make changes to Makefile because the current version of gcc has stricter rules and for this reason wouldn't compile certain files without those changes.<br>
-
+```bash
+-Wno-array-bounds 
+-Wno-infinite-recursion
+```
 
 ## Function
 Every system call that is trackable has counter inside their functions for example sys_read counter:
